@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
@@ -13,57 +14,49 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">My Blog</a>
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
+          blandit libero volutpat sed cras. Dolor purus non enim praesent.
+          Tempor id eu nisl nunc mi. Elit ut aliquam purus sit amet. At
+          imperdiet dui accumsan sit amet nulla facilisi morbi.
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <p>
+          Nulla at volutpat diam ut venenatis tellus. Nulla pharetra diam sit
+          amet nisl suscipit adipiscing. Viverra justo nec ultrices dui. Dolor
+          sit amet consectetur adipiscing elit duis tristique sollicitudin nibh.
+          Nulla aliquet enim tortor at auctor. Et malesuada fames ac turpis
+          egestas maecenas pharetra.
+        </p>
+        <p>
+          Turpis tincidunt id aliquet risus feugiat in ante. Suspendisse
+          interdum consectetur libero id faucibus nisl tincidunt eget nullam.
+          Mus mauris vitae ultricies leo integer malesuada nunc vel risus.
+          Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Viverra
+          vitae congue eu consequat ac felis donec et. Volutpat odio facilisis
+          mauris sit amet massa vitae tortor condimentum.
+        </p>
+        Habitant morbi tristique senectus et netus et malesuada fames ac. Vel
+        eros donec ac odio tempor orci dapibus. Augue lacus viverra vitae congue
+        eu consequat. A cras semper auctor neque vitae. Bibendum neque egestas
+        congue quisque egestas diam in arcu cursus.
+        <p>
+          Pellentesque diam volutpat commodo sed egestas egestas fringilla
+          phasellus. Etiam non quam lacus suspendisse faucibus interdum posuere.
+          Eget felis eget nunc lobortis. Enim nec dui nunc mattis enim ut
+          tellus. Parturient montes nascetur ridiculus mus mauris. Nisl nunc mi
+          ipsum faucibus vitae aliquet. Nibh mauris cursus mattis molestie a
+          iaculis at erat. Sem et tortor consequat id porta nibh venenatis cras.
+          Ultricies leo integer malesuada nunc vel risus. Purus semper eget duis
+          at tellus at urna. Quis lectus nulla at volutpat diam. Massa massa
+          ultricies mi quis hendrerit dolor. Felis eget velit aliquet sagittis
+          id consectetur. Amet facilisis magna etiam tempor orci. Sagittis nisl
+          rhoncus mattis rhoncus urna neque viverra justo.
+        </p>
+        <ContactForm />
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
-  )
+  );
 }
