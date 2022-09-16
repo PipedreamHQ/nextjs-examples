@@ -12,19 +12,7 @@ export function TinyHouseCommunity({ id, fields }) {
   );
 }
 
-export default function Home() {
-  const [records, setRecords] = useState([]);
-
-  async function retrieveRecords() {
-    const { data } = await axios.get("https://eohk5gi3tgxb3xo.m.pipedream.net");
-
-    setRecords(data);
-  }
-
-  useEffect(() => {
-    retrieveRecords();
-  }, []);
-
+export default function Home({ records }) {
   return (
     <div className="container">
       {records.map((record, key) => (
@@ -32,4 +20,18 @@ export default function Home() {
       ))}
     </div>
   );
+}
+
+export async function getStaticProps(context) {
+  async function retrieveRecords() {
+    const { data } = await axios.get("https://eohk5gi3tgxb3xo.m.pipedream.net");
+
+    return data;
+  }
+
+  const records = await retrieveRecords();
+
+  return {
+    props: { records }, // will be passed to the page component as props
+  };
 }
